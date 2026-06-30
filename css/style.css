@@ -339,8 +339,13 @@ img {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-dark);
     font-weight: 600;
+}
+
+/* Labels inside hero search widget are white (dark background) */
+.search-widget .form-group label {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .form-group select,
@@ -348,22 +353,36 @@ img {
     width: 100%;
     padding: 12px;
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-dark);
     font-family: var(--font-body);
     font-size: 0.9rem;
     outline: none;
     transition: var(--transition-smooth);
 }
 
-.form-group select option {
+/* Inside hero search widget: inputs use glassy white-on-dark style */
+.search-widget .form-group select,
+.search-widget .form-group input {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--bg-white);
+}
+
+.search-widget .form-group select option {
     background-color: var(--primary-navy);
     color: var(--bg-white);
 }
 
 .form-group select:focus,
 .form-group input:focus {
+    border-color: var(--steel-blue);
+    background: var(--bg-white);
+}
+
+.search-widget .form-group select:focus,
+.search-widget .form-group input:focus {
     border-color: var(--gold);
     background: rgba(255, 255, 255, 0.2);
 }
