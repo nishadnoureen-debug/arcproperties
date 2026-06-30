@@ -335,7 +335,7 @@ function initPropertyDetailPage() {
     }
 
     // Dynamically inject details
-    document.title = `${prop.title} | ARC Properties`;
+    document.title = `${prop.title} | ARC Global Properties`;
     
     // Set banner title
     const bannerTitle = document.getElementById("detailBannerTitle");
