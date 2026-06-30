@@ -767,13 +767,41 @@ img {
     margin-bottom: 60px;
 }
 
-.footer-about .logo {
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--bg-white);
+    letter-spacing: 1px;
     margin-bottom: 24px;
+    text-decoration: none;
 }
 
-.footer-about .logo img {
+.footer-logo img {
     height: 48px;
-    filter: brightness(0) invert(1);
+    width: auto;
+    /* Keep original logo colors, no filters */
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.footer-logo-line1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--bg-white);
+}
+
+.footer-logo-line2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 2px;
 }
 
 .footer-about p {

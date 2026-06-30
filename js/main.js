@@ -371,7 +371,7 @@ function initPropertyDetailPage() {
                                 <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z" stroke="#4B7095" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M7 17C10 13 13 10.2 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.2 4 13 7 17Z" stroke="#4B7095" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            ${prop.location}, Dubai, UAE
+                            ${prop.location}, UAE
                         </div>
                     </div>
                     <div class="detail-price">
