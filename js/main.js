@@ -676,58 +676,5 @@ function showSuccessModal(title, message) {
     }
 }
 
-// ─── Page Transition Engine ───────────────────────────────────────────────────
-(function () {
-    // Reveal current page: fade body in
-    function revealPage() {
-        document.body.classList.remove("page-exiting");
-        document.body.classList.add("page-loaded");
-    }
 
-    // Fade body out then navigate
-    function fadeAndNavigate(href) {
-        document.body.classList.remove("page-loaded");
-        document.body.classList.add("page-exiting");
-
-        // Navigate after the fade-out completes (200ms)
-        setTimeout(() => {
-            window.location.href = href;
-        }, 220);
-    }
-
-    // Intercept all internal link clicks
-    function interceptLinks() {
-        document.querySelectorAll("a[href]").forEach(link => {
-            const href = link.getAttribute("href");
-            // Skip external, anchors, mailto, tel, javascript
-            if (
-                !href ||
-                href.startsWith("#") ||
-                href.startsWith("mailto:") ||
-                href.startsWith("tel:") ||
-                href.startsWith("javascript:") ||
-                href.startsWith("http://") ||
-                href.startsWith("https://")
-            ) return;
-
-            link.addEventListener("click", (e) => {
-                // Allow ctrl/cmd+click to open in new tab normally
-                if (e.ctrlKey || e.metaKey || e.shiftKey) return;
-                e.preventDefault();
-                fadeAndNavigate(href);
-            });
-        });
-    }
-
-    // Run on DOM ready
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", () => {
-            revealPage();
-            interceptLinks();
-        });
-    } else {
-        revealPage();
-        interceptLinks();
-    }
-})();
 
