@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Properties | Premium Real Estate Agency in Dubai</title>
+    <meta name="description" content="Explore luxury apartments, villas, and off-plan projects in Dubai with ARC Properties. Buy, rent, or list your property with the leading real estate agency in UAE.">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="ARC Properties Logo">
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="properties.html?purpose=sale" class="nav-link">Buy</a></li>
+                    <li><a href="properties.html?purpose=rent" class="nav-link">Rent</a></li>
+                    <li><a href="off-plan.html" class="nav-link">Off-Plan</a></li>
+                    <li><a href="list-property.html" class="nav-link">List Your Property</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+            </div>
+
+            <div class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Redefining Luxury Living</span>
+                <h1 class="hero-title">Find Your Perfect Sanctuary in Dubai</h1>
+                <p class="hero-desc">Discover the finest selection of signature villas, premium penthouses, and exclusive off-plan projects in Dubai's most prestigious neighborhoods.</p>
+            </div>
+
+            <!-- Unified Search Widget -->
+            <div class="search-widget">
+                <div class="search-tabs">
+                    <button class="search-tab active" data-purpose="sale">BUY</button>
+                    <button class="search-tab" data-purpose="rent">RENT</button>
+                    <button class="search-tab" data-purpose="off-plan">OFF-PLAN</button>
+                </div>
+                <form class="search-form" id="heroSearchForm">
+                    <div class="form-group">
+                        <label for="searchLocation">Location</label>
+                        <select id="searchLocation">
+                            <option value="">All Locations</option>
+                            <option value="Dubai Marina">Dubai Marina</option>
+                            <option value="Downtown Dubai">Downtown Dubai</option>
+                            <option value="Palm Jumeirah">Palm Jumeirah</option>
+                            <option value="Business Bay">Business Bay</option>
+                            <option value="Emirates Hills">Emirates Hills</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="searchType">Property Type</label>
+                        <select id="searchType">
+                            <option value="">All Types</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="penthouse">Penthouse</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="searchBeds">Bedrooms</label>
+                        <select id="searchBeds">
+                            <option value="">Any</option>
+                            <option value="1">1+ Bed</option>
+                            <option value="2">2+ Bed</option>
+                            <option value="3">3+ Bed</option>
+                            <option value="4">4+ Bed</option>
+                            <option value="5">5+ Bed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="searchMinPrice">Min Price (AED)</label>
+                        <input type="number" id="searchMinPrice" placeholder="No Min">
+                    </div>
+                    <button type="submit" class="btn btn-secondary search-submit"><i class="fas fa-search"></i> Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>AED 5B+</h3>
+                <p>Transactions Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>15+ Yrs</h3>
+                <p>Industry Expertise</p>
+            </div>
+            <div class="stat-item">
+                <h3>1,200+</h3>
+                <p>Premium Properties Sold</p>
+            </div>
+            <div class="stat-item">
+                <h3>99%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Properties</h2>
+                <p>Our handpicked selection of top-tier residential properties currently on the market</p>
+            </div>
+
+            <!-- Dynamic grid container populated by main.js -->
+            <div class="property-grid" id="homeFeaturedGrid">
+                <!-- Fallback content if JS fails -->
+                <div style="text-align:center; grid-column: span 3; padding: 20px;">
+                    <i class="fas fa-spinner fa-spin" style="font-size:2rem; color:var(--steel-blue);"></i>
+                    <p style="margin-top:10px;">Loading exclusive properties...</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="properties.html" class="btn btn-outline">View All Listings <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Partner with ARC Properties?</h2>
+                <p>We provide standard-setting advisory services based on deep market intelligence and client dedication.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Elite Portfolio Advisors</h3>
+                    <p>Our certified, multilingual advisors possess unmatched local market insights and handle transaction negotiations at the highest level.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Access direct market metrics, accurate historical pricing records, and project growth analytics before making purchase decisions.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>End-to-End Service</h3>
+                    <p>From initial selection and legal compliance checks to property handover, residency visa advisory, and tenancy management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner">
+        <div class="container cta-content">
+            <h2>Thinking of Listing Your Property?</h2>
+            <p>List with ARC Properties and expose your property to our premium network of international buyers and qualified tenants.</p>
+            <a href="list-property.html" class="btn btn-primary"><i class="fas fa-home"></i> List Your Property Today</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container testimonial-container">
+            <div class="section-title">
+                <h2>Words from Our Clients</h2>
+                <p>Discover why developers, property owners, and private investors trust ARC.</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Working with ARC Properties was an exceptional experience. Sameer's knowledge of Emirates Hills and Downtown was stellar. They helped us secure our dream villa with complete transparency and zero stress."</p>
+                <div class="testimonial-author">
+                    <h4>Alexander &amp; Maria V.</h4>
+                    <p>Private Luxury Investors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="ARC Properties Logo">
+                    </a>
+                    <p>ARC Properties is a leading premium real estate agency in Dubai, dedicated to providing customized home buying, selling, and property management services.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="properties.html?purpose=sale">Buy Properties</a></li>
+                        <li><a href="properties.html?purpose=rent">Rent Properties</a></li>
+                        <li><a href="off-plan.html">Off-Plan Projects</a></li>
+                        <li><a href="list-property.html">List Your Property</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Prime Locations</h3>
+                    <ul>
+                        <li><a href="properties.html?location=Downtown%20Dubai">Downtown Dubai</a></li>
+                        <li><a href="properties.html?location=Dubai%20Marina">Dubai Marina</a></li>
+                        <li><a href="properties.html?location=Palm%20Jumeirah">Palm Jumeirah</a></li>
+                        <li><a href="properties.html?location=Emirates%20Hills">Emirates Hills</a></li>
+                        <li><a href="properties.html?location=Business%20Bay">Business Bay</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Office 102-106, Building 02, Business Bay, Dubai, UAE (ORN: 11929)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+97144542588">+971 4 4542588</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@arcproperties.ae">info@arcproperties.ae</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARC Properties. All rights reserved. Registered Real Estate Brokerage in UAE.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="properties.html?purpose=sale" class="mobile-link">Buy</a></li>
+            <li><a href="properties.html?purpose=rent" class="mobile-link">Rent</a></li>
+            <li><a href="off-plan.html" class="mobile-link">Off-Plan</a></li>
+            <li><a href="list-property.html" class="mobile-link">List Your Property</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="successModalTitle">Submission Successful</h3>
+            <p id="successModalMessage">Thank you for getting in touch with us.</p>
+            <button class="btn btn-secondary" id="successModalClose">Close</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Property | ARC Properties</title>
+    <meta name="description" content="Sell or rent your villa, apartment, or penthouse in Dubai with ARC Properties. Use our interactive property valuation listing wizard for quick, premium advisory.">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="ARC Properties Logo">
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="properties.html?purpose=sale" class="nav-link">Buy</a></li>
+                    <li><a href="properties.html?purpose=rent" class="nav-link">Rent</a></li>
+                    <li><a href="off-plan.html" class="nav-link">Off-Plan</a></li>
+                    <li><a href="list-property.html" class="nav-link active">List Your Property</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+            </div>
+
+            <div class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>List Your Property</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>List With Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Listing Wizard Section -->
+    <section class="container" style="overflow: hidden;">
+        <div class="list-container">
+            
+            <!-- Step Indicators -->
+            <div class="form-steps">
+                <div class="step-indicator active">1</div>
+                <div class="step-indicator">2</div>
+                <div class="step-indicator">3</div>
+            </div>
+
+            <form id="listPropertyForm">
+                
+                <!-- STEP 1: Property Details -->
+                <div class="form-step-content active">
+                    <h3 class="step-title">Property Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="listPurpose">List For</label>
+                            <select id="listPurpose" required>
+                                <option value="">Select Option</option>
+                                <option value="sale">Selling Your Property</option>
+                                <option value="rent">Leasing Your Property</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="listType">Property Type</label>
+                            <select id="listType" required>
+                                <option value="">Select Type</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="villa">Villa</option>
+                                <option value="townhouse">Townhouse</option>
+                                <option value="penthouse">Penthouse</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="listLocation">Location / Community</label>
+                            <select id="listLocation" required>
+                                <option value="">Select Community</option>
+                                <option value="Dubai Marina">Dubai Marina</option>
+                                <option value="Downtown Dubai">Downtown Dubai</option>
+                                <option value="Palm Jumeirah">Palm Jumeirah</option>
+                                <option value="Business Bay">Business Bay</option>
+                                <option value="Emirates Hills">Emirates Hills</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="listSize">Size (Sq.Ft.)</label>
+                            <input type="number" id="listSize" placeholder="e.g. 1500" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="listBeds">Bedrooms</label>
+                            <select id="listBeds" required>
+                                <option value="">Select Bedrooms</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4 Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="listPrice">Expected Price (AED)</label>
+                            <input type="number" id="listPrice" placeholder="e.g. 2,000,000" required>
+                        </div>
+                    </div>
+
+                    <div class="step-buttons">
+                        <div></div>
+                        <button type="button" class="btn btn-secondary next-step-btn">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Media Upload -->
+                <div class="form-step-content">
+                    <h3 class="step-title">Photos &amp; Documents</h3>
+                    
+                    <div class="form-row-full">
+                        <label>Upload Property Images</label>
+                        <div class="drag-drop-area" onclick="document.getElementById('listFile').click()">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag and drop photos here, or click to browse</p>
+                            <span style="font-size:0.75rem; color: var(--text-muted);">Supported formats: JPG, PNG. Max size: 10MB per file.</span>
+                            <input type="file" id="listFile" style="display:none;" multiple>
+                        </div>
+                    </div>
+
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-outline prev-step-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="button" class="btn btn-secondary next-step-btn">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Owner Details -->
+                <div class="form-step-content">
+                    <h3 class="step-title">Contact Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ownerName">Full Name</label>
+                            <input type="text" id="ownerName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ownerEmail">Email Address</label>
+                            <input type="email" id="ownerEmail" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ownerPhone">Phone Number</label>
+                            <input type="tel" id="ownerPhone" placeholder="e.g. +971 50 000 0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactTime">Preferred Callback Time</label>
+                            <select id="contactTime" required>
+                                <option value="">Select Time Slot</option>
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                <option value="evening">Evening (4 PM - 7 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-outline prev-step-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle"></i> Submit Listing</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" alt="ARC Properties Logo">
+                    </a>
+                    <p>ARC Properties is a leading premium real estate agency in Dubai, dedicated to providing customized home buying, selling, and property management services.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="properties.html?purpose=sale">Buy Properties</a></li>
+                        <li><a href="properties.html?purpose=rent">Rent Properties</a></li>
+                        <li><a href="off-plan.html">Off-Plan Projects</a></li>
+                        <li><a href="list-property.html">List Your Property</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Prime Locations</h3>
+                    <ul>
+                        <li><a href="properties.html?location=Downtown%20Dubai">Downtown Dubai</a></li>
+                        <li><a href="properties.html?location=Dubai%20Marina">Dubai Marina</a></li>
+                        <li><a href="properties.html?location=Palm%20Jumeirah">Palm Jumeirah</a></li>
+                        <li><a href="properties.html?location=Emirates%20Hills">Emirates Hills</a></li>
+                        <li><a href="properties.html?location=Business%20Bay">Business Bay</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Office 102-106, Building 02, Business Bay, Dubai, UAE (ORN: 11929)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+97144542588">+971 4 4542588</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@arcproperties.ae">info@arcproperties.ae</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARC Properties. All rights reserved. Registered Real Estate Brokerage in UAE.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="properties.html?purpose=sale" class="mobile-link">Buy</a></li>
+            <li><a href="properties.html?purpose=rent" class="mobile-link">Rent</a></li>
+            <li><a href="off-plan.html" class="mobile-link">Off-Plan</a></li>
+            <li><a href="list-property.html" class="mobile-link">List Your Property</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 id="successModalTitle">Submission Successful</h3>
+            <p id="successModalMessage">Thank you for getting in touch with us.</p>
+            <button class="btn btn-secondary" id="successModalClose">Close</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
