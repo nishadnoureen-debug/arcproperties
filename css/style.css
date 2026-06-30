@@ -177,6 +177,22 @@ img {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--bg-white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+    font-weight: 500;
+}
+
 .logo img {
     height: 50px;
     width: auto;
