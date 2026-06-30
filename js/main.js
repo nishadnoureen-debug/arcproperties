@@ -94,6 +94,34 @@ const properties = [
 
 // Document Ready Setup
 document.addEventListener("DOMContentLoaded", () => {
+    // Dynamic active navigation link highlighter
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const params = new URLSearchParams(window.location.search);
+    const purpose = params.get("purpose");
+
+    const navLinks = document.querySelectorAll(".nav-link, .mobile-link");
+    navLinks.forEach(link => {
+        const hrefAttr = link.getAttribute("href");
+        if (!hrefAttr) return;
+
+        const urlParts = hrefAttr.split("?");
+        const linkPath = urlParts[0] || "index.html";
+        const linkParams = urlParts[1] ? new URLSearchParams(urlParts[1]) : null;
+        const linkPurpose = linkParams ? linkParams.get("purpose") : null;
+
+        link.classList.remove("active");
+
+        if (linkPath === currentPath) {
+            if (currentPath === "properties.html") {
+                if (linkPurpose === purpose || (linkPurpose === "sale" && !purpose)) {
+                    link.classList.add("active");
+                }
+            } else {
+                link.classList.add("active");
+            }
+        }
+    });
+
     // Header scroll background change
     const header = document.querySelector(".header");
     if (header) {
