@@ -701,10 +701,10 @@ function showSuccessModal(title, message) {
         overlay.classList.remove("enter-done");
         overlay.classList.add("exit-active");
 
-        // Navigate after the cover animation finishes (550ms)
+        // Navigate after the cover animation finishes (320ms)
         setTimeout(() => {
             window.location.href = href;
-        }, 580);
+        }, 330);
     }
 
     // Intercept all internal link clicks
