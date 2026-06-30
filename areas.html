@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Areas &amp; Communities | ARC Global Properties</title>
+    <meta name="description" content="Explore the most prestigious luxury communities in the UAE. From beachfront villas in Palm Jumeirah to high-end apartments in Saadiyat Island and Downtown Dubai.">
+    <!-- Favicon / Tab Icon -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header scrolled" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="ARC Global Properties Logo" class="logo-img">
+                ARC GLOBAL<span>PROPERTIES</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="off-plan.html" class="nav-link">Projects</a></li>
+                    <li><a href="areas.html" class="nav-link active">Areas</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+            </div>
+
+            <div class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Prestigious Communities</h1>
+        </div>
+    </section>
+
+    <!-- Communities Explorer -->
+    <section class="section container">
+        <div class="section-title">
+            <h2>Explore Premium Neighborhoods</h2>
+            <p>Select your ideal emirate and neighborhood to browse signature listings.</p>
+        </div>
+
+        <!-- Emirates Filter Tabs -->
+        <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px;">
+            <button class="btn btn-secondary" style="border-radius: 50px; padding: 10px 24px;">All Emirates</button>
+        </div>
+
+        <!-- Areas Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+            
+            <!-- Dubai Marina -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-apartment.png" alt="Dubai Marina" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">DUBAI</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Dubai Marina</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">A vibrant waterfront community characterized by high-rise luxury towers, exclusive dining outlets, and luxury yacht clubs.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 4 Projects</span>
+                        <a href="properties.html?location=Dubai%20Marina" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Downtown Dubai -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-penthouse.png" alt="Downtown Dubai" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">DUBAI</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Downtown Dubai</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">Home to the iconic Burj Khalifa, Dubai Mall, and Dubai Fountains, offering dynamic urban living for modern professionals.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 3 Projects</span>
+                        <a href="properties.html?location=Downtown%20Dubai" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Palm Jumeirah -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-villa.png" alt="Palm Jumeirah" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">DUBAI</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Palm Jumeirah</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">World-famous man-made island featuring signature beach-facing villas, luxury five-star resorts, and elite apartments.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 2 Projects</span>
+                        <a href="properties.html?location=Palm%20Jumeirah" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saadiyat Island -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/hero-bg.png" alt="Saadiyat Island" style="width: 100%; height: 100%; object-fit: cover; filter: hue-rotate(20deg);">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">ABU DHABI</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Saadiyat Island</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">Abu Dhabi's cultural hub, housing the Louvre Abu Dhabi and pristine natural sandy beaches with luxury golf resorts.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 2 Projects</span>
+                        <a href="properties.html?location=Saadiyat%20Island" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yas Island -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-villa.png" alt="Yas Island" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9) saturate(1.2);">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">ABU DHABI</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Yas Island</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">An entertainment paradise boasting theme parks, Yas Marina Circuit, and exceptional luxury family developments.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 1 Project</span>
+                        <a href="properties.html?location=Yas%20Island" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Al Marjan Island -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 240px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-apartment.png" alt="Al Marjan Island" style="width: 100%; height: 100%; object-fit: cover; filter: hue-rotate(50deg);">
+                    <span style="position: absolute; top: 20px; left: 20px; background-color: var(--primary-navy); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px;">RAS AL KHAIMAH</span>
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--primary-navy); margin-bottom: 10px;">Al Marjan Island</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px; height: 75px; overflow: hidden;">Ras Al Khaimah's booming luxury destination, featuring the highly anticipated Wynn Integrated Resort and gaming portal.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                        <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fas fa-building" style="color:var(--gold);"></i> 1 Project</span>
+                        <a href="properties.html?location=Al%20Marjan%20Island" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.8rem;">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="ARC Global Properties Logo">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-line1">ARC GLOBAL</span>
+                            <span class="footer-logo-line2">PROPERTIES</span>
+                        </span>
+                    </a>
+                    <p>ARC Global Properties is a leading premium real estate agency across the UAE, dedicated to providing customized home buying, selling, and property management services.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="properties.html?purpose=sale">Buy Properties</a></li>
+                        <li><a href="properties.html?purpose=rent">Rent Properties</a></li>
+                        <li><a href="off-plan.html">Off-Plan Projects</a></li>
+                        <li><a href="list-property.html">List Your Property</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Prime Locations</h3>
+                    <ul>
+                        <li><a href="properties.html?location=Downtown%20Dubai">Downtown Dubai</a></li>
+                        <li><a href="properties.html?location=Dubai%20Marina">Dubai Marina</a></li>
+                        <li><a href="properties.html?location=Palm%20Jumeirah">Palm Jumeirah</a></li>
+                        <li><a href="properties.html?location=Saadiyat%20Island">Saadiyat Island</a></li>
+                        <li><a href="properties.html?location=Yas%20Island">Yas Island</a></li>
+                        <li><a href="properties.html?location=Al%20Marjan%20Island">Al Marjan Island</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Office 102-106, Building 02, Business Bay, Dubai, UAE (ORN: 11929)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+97144542588">+971 4 4542588</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@arcproperties.ae">info@arcproperties.ae</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARC Global Properties. All rights reserved. Registered Real Estate Brokerage in UAE.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="off-plan.html" class="mobile-link">Projects</a></li>
+            <li><a href="areas.html" class="mobile-link active">Areas</a></li>
+            <li><a href="about.html" class="mobile-link">About Us</a></li>
+            <li><a href="careers.html" class="mobile-link">Careers</a></li>
+            <li><a href="blog.html" class="mobile-link">Blog</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Success Pop-up Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon"><i class="fas fa-check"></i></div>
+            <h3 id="successModalTitle">Success!</h3>
+            <p id="successModalMessage">Your request was submitted successfully.</p>
+            <button class="btn btn-secondary" id="successModalClose">Close</button>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

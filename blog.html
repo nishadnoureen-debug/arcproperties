@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Properties for Sale & Rent in the UAE | ARC Global Properties</title>
-    <meta name="description" content="Browse our luxury properties for sale and rent across UAE — Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah. Filter by price, bedrooms, and property type.">
+    <title>UAE Real Estate Blog &amp; Insights | ARC Global Properties</title>
+    <meta name="description" content="Read the latest news, market insights, and guides on buying and investing in property across Dubai, Abu Dhabi, and Ras Al Khaimah.">
     <!-- Favicon / Tab Icon -->
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
     <!-- FontAwesome for Premium Icons -->
@@ -28,7 +28,7 @@
                     <li><a href="areas.html" class="nav-link">Areas</a></li>
                     <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="careers.html" class="nav-link">Careers</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
                     <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
@@ -45,111 +45,60 @@
 
     <section class="page-banner">
         <div class="container">
-            <h1>Property Listings</h1>
+            <h1>Market Insights &amp; News</h1>
         </div>
     </section>
 
-    <!-- Properties Catalog Section -->
-    <section class="container">
-        <div class="properties-page-layout">
+    <!-- Blog Posts Grid -->
+    <section class="section container">
+        <div class="section-title">
+            <h2>Real Estate Market Intelligence</h2>
+            <p>Stay up to date with strategic analyses and property investment guides written by our advisory board.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 50px;">
             
-            <!-- Sidebar Filter -->
-            <aside class="filter-sidebar">
-                <h3>Filter Properties</h3>
-                
-                <div class="filter-group">
-                    <label for="filterPurpose">Property Status</label>
-                    <select id="filterPurpose">
-                        <option value="all">All Statuses</option>
-                        <option value="sale">For Sale</option>
-                        <option value="rent">For Rent</option>
-                        <option value="off-plan">Off-Plan</option>
-                    </select>
+            <!-- Blog Card 1 -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="assets/hero-bg.png" alt="Dubai Real Estate Market" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; bottom: 15px; left: 20px; background-color: var(--gold); color: var(--primary-navy); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">INVESTMENT</span>
                 </div>
-
-                <div class="filter-group">
-                    <label for="filterLocation">Location</label>
-                    <select id="filterLocation">
-                        <option value="">All Locations</option>
-                        <optgroup label="Dubai">
-                            <option value="Dubai Marina">Dubai Marina</option>
-                            <option value="Downtown Dubai">Downtown Dubai</option>
-                            <option value="Palm Jumeirah">Palm Jumeirah</option>
-                            <option value="Business Bay">Business Bay</option>
-                            <option value="Emirates Hills">Emirates Hills</option>
-                            <option value="JBR">Jumeirah Beach Residence</option>
-                        </optgroup>
-                        <optgroup label="Abu Dhabi">
-                            <option value="Saadiyat Island">Saadiyat Island</option>
-                            <option value="Yas Island">Yas Island</option>
-                            <option value="Al Reem Island">Al Reem Island</option>
-                        </optgroup>
-                        <optgroup label="Sharjah">
-                            <option value="Al Majaz">Al Majaz</option>
-                            <option value="Aljada">Aljada</option>
-                        </optgroup>
-                        <optgroup label="Ras Al Khaimah">
-                            <option value="Al Marjan Island">Al Marjan Island</option>
-                        </optgroup>
-                    </select>
+                <div style="padding: 25px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-calendar-alt"></i> June 28, 2026 • By Shariq Mansoor</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--primary-navy); margin: 10px 0 12px; line-height: 1.4;">Why UAE Real Estate Continues to Outperform Global Markets</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">Analyzing the macroeconomic triggers behind the persistent capital inflow, high rental yield averages, and population growth across the UAE.</p>
+                    <a href="#" class="read-more-btn" style="color: var(--gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">Read Article <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
                 </div>
+            </div>
 
-                <div class="filter-group">
-                    <label for="filterType">Property Type</label>
-                    <select id="filterType">
-                        <option value="">All Types</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="villa">Villa</option>
-                        <option value="townhouse">Townhouse</option>
-                        <option value="penthouse">Penthouse</option>
-                    </select>
+            <!-- Blog Card 2 -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-villa.png" alt="Off-Plan Purchases" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; bottom: 15px; left: 20px; background-color: var(--gold); color: var(--primary-navy); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">GUIDE</span>
                 </div>
-
-                <div class="filter-group">
-                    <label for="filterBeds">Min Bedrooms</label>
-                    <select id="filterBeds">
-                        <option value="">Any</option>
-                        <option value="1">1+ Bed</option>
-                        <option value="2">2+ Bed</option>
-                        <option value="3">3+ Bed</option>
-                        <option value="4">4+ Bed</option>
-                        <option value="5">5+ Bed</option>
-                    </select>
+                <div style="padding: 25px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-calendar-alt"></i> June 15, 2026 • By Farhan Al Ameri</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--primary-navy); margin: 10px 0 12px; line-height: 1.4;">Mastering Off-Plan Developer Payment Plans</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">A detailed breakdown of 60/40, 70/30, and post-handover structures, helping buyers mitigate financial risk and capitalize on equity growth.</p>
+                    <a href="#" class="read-more-btn" style="color: var(--gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">Read Article <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
                 </div>
+            </div>
 
-                <div class="filter-group">
-                    <label>Price Range (AED)</label>
-                    <div class="range-inputs">
-                        <input type="number" id="filterMinPrice" placeholder="Min">
-                        <input type="number" id="filterMaxPrice" placeholder="Max">
-                    </div>
+            <!-- Blog Card 3 -->
+            <div style="background-color: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="assets/prop-penthouse.png" alt="Abu Dhabi Louvre" style="width: 100%; height: 100%; object-fit: cover;">
+                    <span style="position: absolute; bottom: 15px; left: 20px; background-color: var(--gold); color: var(--primary-navy); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">REGIONAL SPOTLIGHT</span>
                 </div>
-
-                <button class="btn btn-secondary" id="resetFiltersBtn" style="width: 100%;"><i class="fas fa-undo"></i> Reset Filters</button>
-            </aside>
-
-            <!-- Main Results Area -->
-            <main class="properties-results">
-                <div class="properties-header">
-                    <div class="results-count" id="resultsCount">0 Properties Found</div>
-                    <div style="display:flex; gap:16px; align-items:center;">
-                        <input type="text" id="catalogSearchInput" placeholder="Search by name..." style="padding: 10px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline:none;">
-                        <div class="layout-toggles">
-                            <div class="layout-btn active"><i class="fas fa-th-large"></i></div>
-                            <div class="layout-btn"><i class="fas fa-list"></i></div>
-                        </div>
-                    </div>
+                <div style="padding: 25px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="far fa-calendar-alt"></i> June 02, 2026 • By Laura Harrison</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--primary-navy); margin: 10px 0 12px; line-height: 1.4;">Louvre &amp; Guggenheim: Saadiyat Cultural Growth</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">Why cultural developments are steering unprecedented high-net-worth residency shifts to Abu Dhabi's landmark seaside communities.</p>
+                    <a href="#" class="read-more-btn" style="color: var(--gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">Read Article <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
                 </div>
-
-                <!-- Dynamic Grid container populated by main.js -->
-                <div class="property-grid" id="propertiesCatalogGrid">
-                    <!-- Fallback content if JS fails -->
-                    <div style="text-align:center; grid-column: span 3; padding: 20px;">
-                        <i class="fas fa-spinner fa-spin" style="font-size:2rem; color:var(--steel-blue);"></i>
-                        <p style="margin-top:10px;">Loading catalog...</p>
-                    </div>
-                </div>
-            </main>
+            </div>
 
         </div>
     </section>
@@ -238,27 +187,26 @@
             <li><a href="areas.html" class="mobile-link">Areas</a></li>
             <li><a href="about.html" class="mobile-link">About Us</a></li>
             <li><a href="careers.html" class="mobile-link">Careers</a></li>
-            <li><a href="blog.html" class="mobile-link">Blog</a></li>
+            <li><a href="blog.html" class="mobile-link active">Blog</a></li>
             <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
         </ul>
+    </div>
+
+    <!-- Success Pop-up Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon"><i class="fas fa-check"></i></div>
+            <h3 id="successModalTitle">Success!</h3>
+            <p id="successModalMessage">Your request was submitted successfully.</p>
+            <button class="btn btn-secondary" id="successModalClose">Close</button>
+        </div>
     </div>
 
     <!-- Page Transition Overlay -->
     <div class="page-transition-overlay"></div>
 
-    <!-- Success Modal -->
-    <div class="success-modal" id="successModal">
-        <div class="success-modal-content">
-            <div class="success-icon">
-                <i class="fas fa-check"></i>
-            </div>
-            <h3 id="successModalTitle">Submission Successful</h3>
-            <p id="successModalMessage">Thank you for getting in touch with us.</p>
-            <button class="btn btn-secondary" id="successModalClose">Close</button>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>
+

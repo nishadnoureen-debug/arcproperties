@@ -1834,3 +1834,74 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* Page loaded transition & overlay styles */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+body.page-loaded {
+    opacity: 1;
+}
+
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(160deg, #050F20 0%, var(--primary-navy) 50%, #061528 100%);
+    z-index: 99999;
+    transform: translateY(0);
+    transition: transform 0.75s cubic-bezier(0.87, 0, 0.13, 1);
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Shimmer bar inside overlay */
+.page-transition-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(197, 168, 128, 0.07), transparent);
+    animation: overlayShimmer 1.2s ease infinite;
+}
+
+/* Gold accent line at bottom of overlay */
+.page-transition-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, var(--gold-dark) 60%, transparent 100%);
+    animation: goldGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes overlayShimmer {
+    0%   { left: -100%; opacity: 0; }
+    30%  { opacity: 1; }
+    100% { left: 140%; opacity: 0; }
+}
+
+@keyframes goldGlow {
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1; }
+}
+
+/* Entering page (reveal) — slides UP out of view */
+.page-transition-overlay.enter-done {
+    transform: translateY(-100%);
+    transition: transform 0.75s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* Exiting page (cover) — drops DOWN to cover screen */
+.page-transition-overlay.exit-active {
+    transform: translateY(0);
+    pointer-events: all;
+    transition: transform 0.55s cubic-bezier(0.87, 0, 0.13, 1);
+}

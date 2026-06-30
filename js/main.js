@@ -675,3 +675,71 @@ function showSuccessModal(title, message) {
         });
     }
 }
+
+// ─── Page Transition Engine ───────────────────────────────────────────────────
+(function () {
+    const overlay = document.querySelector(".page-transition-overlay");
+
+    // Reveal current page: slide overlay UP out of view
+    function revealPage() {
+        document.body.classList.add("page-loaded");
+        if (!overlay) return;
+        // Give browser a frame to paint, then slide overlay away
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                overlay.classList.add("enter-done");
+            });
+        });
+    }
+
+    // Cover screen then navigate
+    function coverAndNavigate(href) {
+        if (!overlay) {
+            window.location.href = href;
+            return;
+        }
+        overlay.classList.remove("enter-done");
+        overlay.classList.add("exit-active");
+
+        // Navigate after the cover animation finishes (550ms)
+        setTimeout(() => {
+            window.location.href = href;
+        }, 580);
+    }
+
+    // Intercept all internal link clicks
+    function interceptLinks() {
+        document.querySelectorAll("a[href]").forEach(link => {
+            const href = link.getAttribute("href");
+            // Skip external, anchors, mailto, tel, javascript
+            if (
+                !href ||
+                href.startsWith("#") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
+                href.startsWith("javascript:") ||
+                href.startsWith("http://") ||
+                href.startsWith("https://")
+            ) return;
+
+            link.addEventListener("click", (e) => {
+                // Allow ctrl/cmd+click to open in new tab normally
+                if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+                e.preventDefault();
+                coverAndNavigate(href);
+            });
+        });
+    }
+
+    // Run on DOM ready
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+            revealPage();
+            interceptLinks();
+        });
+    } else {
+        revealPage();
+        interceptLinks();
+    }
+})();
+
